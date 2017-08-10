@@ -1,0 +1,10 @@
+# Development & Testing Dockerfile
+
+FROM node:latest
+
+ADD . app
+WORKDIR app
+
+RUN npm run setup
+
+CMD ["npm", "run", "start"]

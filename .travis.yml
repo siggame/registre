@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+  - docker
+
+before_script:
+  - docker build --tag registre --file Dockerfile.dev .
+
+script:
+  - docker run registre npm run test
