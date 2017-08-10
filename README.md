@@ -21,16 +21,17 @@ Current Maintainer: [Russley Shaw](https://github.com/russleyshaw)
 
 ### User Submission Data
 This is the current schema of form data that will be requested of the user, as well as some additional comments to take into account when prompting the user.
+
 |Name|Type|Description|Comments|
 |---|---|---|---|
-|name|string|The name of the competitor.|Request that the competitor use their real name.|
-|email|string|The E-Mail of the competitor.|Request that the competitor use their University E-Mail.|
-|competed_before|boolean|Whether or not the competitor has competed in MegaMinerAI before.|
-|on_discord|boolean|Whether or not the competitor is on our public discord.|Display an invite to ACM SIG-Game Public Discord server after form has been filled out.|
+|name|string|The name of the competitor.|Request that the competitor use their real name.|  
+|email|string|The E-Mail of the competitor.|Request that the competitor use their University E-Mail.|  
+|competed_before|boolean|Whether or not the competitor has competed in MegaMinerAI before.| |
+|on_discord|boolean|Whether or not the competitor is on our public discord.|Display an invite to ACM SIG-Game Public Discord server after form has been filled out.|  
 |shirt_size|x-small, small, medium, large, x-large, 2x-large|The shirt size of the competitor.|Please note that we only provide men's shirt sizes. We would be more than happy to accommidate women's shirt sizes if there is enough demand. E-Mail [siggame@mst.edu](mailto:siggame@mst.edu) to voice such a complaint.|
-|pizza_choice|cheese, pepperoni, chicken, n/a, other|The pizza the competitor likes.||
+|pizza_choice|cheese, pepperoni, chicken, n/a, other|The pizza the competitor likes.| |  
 |pizza_other|string|Alternative pizza choice.|If there is enough demand for a different type of pizza, we will consider it.|
-|is_acm_member|boolean|Is the competitor a member of ACM General?|An ACM General member is defined as a ACM General member that has paid his/her dues.|
+|is_acm_member|boolean|Is the competitor a member of ACM General?|An ACM General member is defined as a ACM General member that has paid his/her dues.| |
 
 ## Getting Started
 ### Run normally
