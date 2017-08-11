@@ -1,11 +1,10 @@
-# Production Dockerfile
-
 FROM node:latest
+LABEL maintainer="russleyshaw@gmail.com"
 
 ADD . app
 WORKDIR app
 
 RUN npm run setup
-RUN npm run build-prod
+RUN npm run build
 
 CMD ["npm", "run", "start-prod"]
