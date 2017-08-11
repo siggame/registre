@@ -1,4 +1,4 @@
-const chai = require("chai");
+import * as chai from "chai";
 
 describe("Sanity", function() {
     it("shall be sane", function() {
