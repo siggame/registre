@@ -39,6 +39,11 @@ This is the current schema of form data that will be requested of the user, as w
 # Initialize project
 npm run setup
 
+# Build project
+npm run build
+
+# OR 
+
 ## Run project
 npm run start
 ```

@@ -6,4 +6,8 @@ vagrant/
 node_modules/
 npm-debug.log
 
-doc/
+# Compiled TS
+dist/
+src/**/*.js
+test/**/*.js
+
