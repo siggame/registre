@@ -9,7 +9,6 @@ import * as csv from "./csv";
 import * as vars from "./vars";
 
 winston.configure({
-    level: "debug",
     transports: [
         new (winston.transports.Console)({
             timestamp: true

@@ -4,7 +4,8 @@ services:
   - docker
 
 before_script:
-  - docker build --tag registre --file Dockerfile.dev .
+  - docker build --tag registre --file Dockerfile .
+  - docker build --tag registre-dev --file Dockerfile.dev .
 
 script:
-  - docker run registre npm run test
+  - docker run registre-dev npm run test
