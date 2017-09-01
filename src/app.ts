@@ -7,6 +7,7 @@ import * as express from "express";
 
 import * as csv from "./csv";
 import * as vars from "./vars";
+import * as bodyParser from "body-parser";
 
 winston.configure({
     transports: [
@@ -19,15 +20,18 @@ winston.configure({
 const app = express();
 
 app.use(express.static('static'));
-
-app.use((req: Request, res: Response, next: NextFunction) => {
-    winston.info(`${req.method}\t${req.url}`);
-});
+// Body parser for handling request data
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.post('/user_input', (req: Request, res: Response) => {
-    // TODO: Verify user input
-    // TODO: Log user input to CSV
-    //
+    csv.writeRow(req.body).then(() => {
+        // TODO: Validation and redirection to actual pages
+        res.redirect('/');
+    }).catch((err) => {
+        winston.error(err);
+        res.redirect('/500/');
+    });
 });
 
 app.listen(vars.PORT, () => {
