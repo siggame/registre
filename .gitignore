@@ -11,3 +11,5 @@ dist/
 src/**/*.js
 test/**/*.js
 
+# CSV Data File
+*.csv
