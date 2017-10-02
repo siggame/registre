@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register for MegaminerAI</title>
+
+    <!-- Stylesheets -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css" rel="stylesheet" integrity="sha384-gv0oNvwnqzF6ULI9TVsSmnULNb3zasNysvWwfT/s4l8k5I+g6oFz9dye0wg3rQ2Q" crossorigin="anonymous">
+</head>
+
+
+
+<body>
+<div class="container">
+    <h1>Register for MegaminerAI 20</h1>
+    <div style="background-color:#000; height:1px;" />
+    <br />
+
+    <% errors.forEach((error) => { %>
+        <div class="alert alert-danger" role="alert">
+            <%- error.msg %>
+        </div>
+    <% }); %>
+
+    <form action="/" method="post">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name"><br>
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" class="form-control" id="email" name="email"><br>
+        </div>
+        <div class="form-group">
+            <label>Have you competed in a MegaminerAI before?</label>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="competedBefore" id="competedBeforeYes" value="yes" checked>
+                    Yes
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="competedBefore" id="competedBeforeNo" value="no">
+                    No
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Are you a member in SIG-Game's Public Discord server?</label>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="onDiscord" id="discordJoinYes" value="yes" checked>
+                    Yes
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="onDiscord" id="discordJoinNo" value="no">
+                    No
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="shirtSize">Shirt Size</label>
+            <select class="form-control" id="shirtSize" name="shirtSize">
+                <option>XS</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+                <option>XXL</option>
+                <option>3XL</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Pizza Topping Preferences</label>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="pizzaChoice" value="pepperoni">
+                    Pepperoni
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="pizzaChoice" value="sausage">
+                    Sausage
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="pizzaChoice" value="bacon">
+                    Bacon
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="pizzaChoice" value="veggie">
+                    Veggie
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="pizzaOther">Other Pizza Preference not specified above</label>
+            <input type="text" class="form-control" id="pizzaOther" name="pizzaOther">
+        </div>
+        <div class="form-group">
+            <label>Are you an ACM Member?</label>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="isAcmMember" id="acmMemberYes" value="yes" checked>
+                    Yes
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="isAcmMember" id="acmMemberNo" value="no">
+                    No
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-default">Submit</button><br>
+        </div>
+    </form>
+</div>
+</body>
+</html>
