@@ -26,13 +26,13 @@
   },
   "homepage": "https://github.com/siggame/registre#readme",
   "dependencies": {
-    "body-parser": "^1.17.2",
+    "body-parser": "^1.18.3",
     "dotenv": "^4.0.0",
     "ejs": "^2.5.7",
-    "express": "^4.15.4",
+    "express": "^4.16.4",
     "express-validator": "^4.1.0",
     "fs-extra": "^4.0.1",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.11",
     "winston": "^2.3.1"
   },
   "devDependencies": {
