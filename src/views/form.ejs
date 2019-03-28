@@ -7,8 +7,6 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css" rel="stylesheet" integrity="sha384-gv0oNvwnqzF6ULI9TVsSmnULNb3zasNysvWwfT/s4l8k5I+g6oFz9dye0wg3rQ2Q" crossorigin="anonymous">
 </head>
 
-
-
 <body>
 <div class="container">
     <h1>Register for MegaminerAI 22</h1>
@@ -119,8 +117,33 @@
             </div>
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-default">Submit</button><br>
+            <label>Are you a student?</label>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="isStudent" id="isStudentYes" value="yes" checked>
+                    Yes
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="isStudent" id="isStudentNo" value="no">
+                    No
+                </label>
+            </div>
         </div>
+        <div>
+            <script
+                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="pk_test_6mBUzKTw5gUD99Nf3EwID98W"
+                data-amount="1000"
+                data-name="MegaminerAI"
+                data-description="Fee for participating in MegaminerAI"
+                data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                data-locale="auto"
+                data-zip-code="true">
+            </script>
+        </div>
+        <br/>
     </form>
 </div>
 </body>

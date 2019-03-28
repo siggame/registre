@@ -10,12 +10,13 @@ export interface UserData {
     pizzaChoice: string;
     pizzaOther?: string;
     isAcmMember: string;
+    isStudent: string;
 }
 
 const CSV_PATH: string = "data.csv";
 
 const COLUMNS: string[] = [
-    "Name", "E-Mail", "Competed Before", "On Discord", "Shirt Size", "Pizza Choice", "Pizza Other", "Is ACM Member"
+    "Name", "E-Mail", "Competed Before", "On Discord", "Shirt Size", "Pizza Choice", "Pizza Other", "Is ACM Member", "Is Student"
 ]
 
 export async function fileExists(path: string): Promise<boolean> {
@@ -41,7 +42,8 @@ export async function writeRow(data: UserData): Promise<void> {
         data.shirtSize,
         data.pizzaChoice,
         data.pizzaOther || "",
-        data.isAcmMember
+        data.isAcmMember,
+        data.isStudent
     ].map(elem => JSON.stringify(elem))
         .join(",") + "\n";
 

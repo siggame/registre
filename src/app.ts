@@ -9,6 +9,10 @@ import * as csv from "./csv";
 import * as vars from "./vars";
 import * as bodyParser from "body-parser";
 import { body, validationResult} from "express-validator/check";
+import * as Stripe from 'stripe';
+
+// REPLACE THIS STRING
+const stripe = new Stripe('secret key goes here, do not push the secret key');
 
 winston.configure({
     transports: [
@@ -36,6 +40,15 @@ app.post('/', [
     body('email', 'Please enter an email').not().isEmpty(),
     body('email', 'Invalid email - please use a valid email address.').isEmail(),
     ], (req: Request, res: Response) => {
+    const token = req.body.stripeToken;
+    (async () => {
+        const charge = await stripe.charges.create({
+            amount: 1000,
+            currency: "usd",
+            description: "Fee to compete in MegaminerAI",
+            source: token
+        });
+    })();
     const errors = validationResult(req).array();
     if(errors.length > 0) {
         res.render('form', {errors: errors});
